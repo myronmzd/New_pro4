@@ -3,7 +3,7 @@
 This is a simple project to demonstrate the use of Apache Kafka for messaging between producers and consumers.
 
 **Poject arch**
-
+```text
 ┌─────────────────────────────────────────────┐
 │                   PRODUCERS                 │
 │  • App logs                                 │
@@ -93,3 +93,18 @@ This is a simple project to demonstrate the use of Apache Kafka for messaging be
 │     (SNS → Email / Slack / Teams)           │
 │  • Alerts if error spike or anomaly         │
 └─────────────────────────────────────────────┘
+```
+
+
+**Final AWS Infrastructure List (Simple & Cheap)** 
+
+| Component    | AWS Resource	    | Size Purpose |
+|----------------------------|---------------------------------------------|------------------------|
+VPC	                | VPC + Subnets	|Networking
+|Kafka + Zookeeper	     |EC2	t3.medium	     |Message Streaming|
+|Kafka |Connect Same EC2	          |S3/ES integration|
+|Airflow|	EC2	t3.medium	|Orchestration|
+|Elasticsearch + Kibana|	EC2	t3.medium	|Dashboards/Search|
+|S3	|Buckets	|	Data storage|
+|IAM	|Roles/Policies		|Permissions|
+|Security	|SGs | Network rules|
