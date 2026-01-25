@@ -1,0 +1,69 @@
+############################
+# Terraform
+############################
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+.terraform.lock.hcl.backup
+
+############################
+# AWS / Cloud
+############################
+.aws/
+.aws-sam/
+samconfig.toml
+
+############################
+# Python
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+
+############################
+# Environment / Secrets
+############################
+.env
+.env.*
+*.env
+secrets.*
+credentials.*
+config.*
+
+############################
+# VS Code / Dev Containers
+############################
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.devcontainer/.env
+
+############################
+# OS / Editor junk
+############################
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.log
+
+############################
+# Packaging / Build
+############################
+dist/
+build/
+*.zip
+*.tar.gz
+*.egg-info/
